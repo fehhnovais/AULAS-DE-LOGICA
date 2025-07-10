@@ -1,0 +1,15 @@
+/* HERANÇA */
+
+body{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    border: solid 3px blueviolet;
+    padding: 50px;
+    margin: 10px 200px 15px 200px;
+}
+
+div{
+    /*  */
+    border: inherit;
+    padding: inherit;
+}

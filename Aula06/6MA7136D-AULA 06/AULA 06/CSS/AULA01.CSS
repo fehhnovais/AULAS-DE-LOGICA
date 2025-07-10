@@ -1,0 +1,37 @@
+
+/* selecionado uma clase */
+
+.seletor {
+    color: rgb(114, 192, 166);
+
+    /* tamanho fonte */
+    font-size: 30px;
+
+    /* posicao */
+    text-align: center;
+
+    /* multiplos valores */
+    /* borda */
+    border: solid 10px rgb(96, 111, 106);
+    font-family: 'Courier New', Courier, monospace;
+
+    /* calculos de posicao */
+    width: calc(98%);
+    background-color: rgb(96, 111, 106);
+}
+
+    /* usando uma pseudo-classe */
+    .seletor:hover{
+        background-color: rgb(147, 154, 152);
+    }
+
+    /* usando um pseud-elemento */
+    .seletor::first-letter {
+        font-size: 60px;
+        font-weight: bold;
+    }
+
+
+
+
+

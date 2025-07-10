@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+
+
+<body>
+    <h1><u>Formulario</u></h1>
+
+    <!-- Puxar outra pagina -->
+    <form action="sucesso.html" method="get">
+
+        <h2> Dados pessoais </h2>
+
+        <!-- Placeholder= letra clarinha que some -->
+        <!--Required= torna campo obrigatorio -->
+        <!--maxlength= Maximo de numeros -->
+        <!--minlength= Minimo de numeros -->
+        <label for="nome-campo" >Nome: </label>
+        <input id="nome-campo" type="text" placeholder="Digite.." required>
+
+        <br>
+        <br>
+
+        <label for="email-campo"> E-mail:</label>
+        <input id="email-campo" type="email" placeholder="Digite.."required>
+
+        <br>
+        <br>
+
+         <!--Selecao com opcoes  -->
+        <h2>Feedback</h2>
+        <h3>Voce esta apendendo com as aulas?</h3>
+
+        <select>
+            <option value="SIM">SIM</option>
+            <option value="NAO">NAO</option>
+            <option disabled value="Selecione"> Selecione</option>
+        </select>
+
+        <br>
+        <br>
+        <br>
+        
+
+        <button type="submit"> Cadastrar</button>
+
+ 
+    </form>
+    
+</body>
+</html>

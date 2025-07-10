@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+
+
+<body>
+    <h1><u>Meu Primeiro Formulario</u></h1>
+
+    <!-- Puxar outra pagina -->
+    <form action="sucesso.html" method="get">
+
+        <h2> Dados pessoais </h2>
+
+        <!-- Placeholder= letra clarinha que some -->
+        <!--Required= torna campo obrigatorio -->
+        <!--maxlength= Maximo de numeros -->
+        <!--minlength= Minimo de numeros -->
+        <label for="nome-campo" >Nome: </label>
+        <input id="nome-campo" type="text" placeholder="Digite.." required>
+
+        <br>
+        <br>
+
+        <label for="email-campo"> E-mail:</label>
+        <input id="email-campo" type="email" placeholder="Digite.."required>
+
+        <br>
+        <br>
+
+        <label for="senha-campo" >Senha:</label>
+        <input id="senha-campo" type="password" placeholder="Digite..." 
+        required maxlength="8" minlength="6">
+
+        <br>
+        <br>
+
+        <h2>Data nascimento</h2>
+
+        <label for="data-nasc" >data nascimento:</label>
+        <input type="datetime-local">
+        
+        <br>
+        <br>
+
+        <h2> Genero</h2>
+
+        <input type="radio" id="Maculino" name ="Genero" value="Maculino">
+        <label for="Maculino"> Masculino</label><br>
+
+        <input type="radio" id="Feminino" name ="Genero" value="Feminino">
+        <label for="Feminino">Feminino</label><br>
+
+        <input type="radio" id="Outros" name ="Genero" value="Outros">
+        <label for="Outros">Outros</label>
+
+        <br>
+        <br>
+
+        <!--checkbox= check selecao -->
+        <h2>Redes sociais</h2>
+
+
+        <input type="checkbox" id="item1" name="item1" value="Facebook">
+        <label for="item1"> Facebook</label>
+        <br>
+        <input type="checkbox" id="item2" name="item2" value="Instagram">
+        <label for="item2"> Instagram</label>
+        <br>
+        <input type="checkbox" id="item3" name="item3" value="Twitter">
+        <label for="item1"> Twitter</label>
+
+        <br>
+        <br>
+
+         <!--Selecao com opcoes  -->
+        <h2>Selecione sua faculdade</h2>
+
+        <select>
+            <option value="USF">USF</option>
+            <option value="UAM">UAM</option>
+            <option selected value="UNIFAAT">UNIFAAT</option>
+            <option disabled value="VASP"> VASP</option>
+        </select>
+
+        <br>
+        <br>
+        <br>
+
+        <input type="checkbox" required>
+        <label> concordo com os <a href="" target="_blank" >termos contrato</label>
+
+        <br>
+        <br>
+
+        <button type="submit"> Cadastrar</button>
+
+ 
+    </form>
+    
+</body>
+</html>
