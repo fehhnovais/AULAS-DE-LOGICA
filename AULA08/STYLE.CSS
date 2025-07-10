@@ -1,0 +1,259 @@
+/* SELETORES */
+
+
+
+/* Reset básico e comportamento suave ao clicar em links */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  
+  /* Corpo da página */
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f4f4;
+    color: #333;
+  }
+  
+  /* Barra de navegação */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+  
+    /* justify-content: space-between empurra o primeiro filho para o lado esquerdo (o .logo) e o último filho para o lado direito (o .hamburger e o menu).
+       O .logo é o primeiro item, então o navegador o alinha naturalmente à esquerda. */
+  
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0px 30px;
+    /* Logo da marca */
+  
+    img{
+      width: 100px; height: auto;
+    }
+  
+    /* Quanto maior o numero de um elemento com o z-index mais a frente o elemento fica */
+    z-index: 999;
+  }
+  
+  
+  
+  /* Links de navegação escondidos por padrão no mobile, dando espaço para o menu */
+  .nav-links {
+    display: none;
+    list-style: none;
+    flex-direction: column;
+    gap: 15px;
+    background: white;
+    position: absolute;
+    top: 65px;
+    right: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  /* Exibe o menu quando ativado */
+  .nav-links.active {
+    display: flex;
+  }
+  
+  /* Estilos dos links */
+  .nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+  
+  /* Hover nos links */
+  .nav-links a:hover {
+    color: #1f1b65;
+  }
+  
+  /* Ícone do menu hamburguer visível no mobile */
+  .hamburger {
+    display: block;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  /* Seção principal "Hero" */
+  .hero {
+    background: linear-gradient(135deg, #787882, #a53f9a);
+    color: white;
+    padding: 150px 20px 80px;
+    text-align: center;
+    animation: fadeIn 1.5s ease;
+  }
+  
+  /* Título principal da "Hero" */
+  .hero-content h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  
+  /* Texto secundário da "Hero" */
+  .hero-content p {
+    
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  /* Botão padrão */
+  .btn {
+    background: white;
+    color: #1f1b65;
+    padding: 12px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* Hover do botão */
+  .btn:hover {
+    background: #e0e0ff;
+  }
+  
+  /* Seção de recursos */
+  .features {
+    padding: 60px 20px;
+    background: #fff;
+    text-align: center;
+  }
+  
+  /* Container centralizador */
+  .container {
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  /* Cards de funcionalidades */
+  .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* GAP serve para dar espaço entre os elementos flex box */
+    margin-top: 30px;
+  }
+  
+  /* Card individual */
+  .card {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 280px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  /* Efeito de hover no card */
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Imagem do card */
+  .card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+  }
+  
+  /* Título do card */
+  .card h3 {
+    margin-bottom: 10px;
+    color: #f703ce;
+  }
+  
+  /* Seção de chamada para ação */
+  .cta {
+    background: #f703ce;
+    color: white;
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  /* Formulário da seção CTA */
+  .cta-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  /* Input de e-mail */
+  .cta-form input {
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    width: 80%;
+  }
+  
+  /* Botão do formulário CTA */
+  .cta-form .btn {
+    padding: 12px 25px;
+  }
+  
+  /* Rodapé */
+  footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+  }
+  
+  /* Animação de FadeIn para o hero */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Media Query para telas maiores (Desktop) */
+  @media (min-width: 769px) {
+    .nav-links {
+      display: flex;
+      flex-direction: row;
+      gap: 25px;
+      position: static;
+      background: none;
+      padding: 0;
+      box-shadow: none;
+    }
+  
+    .hamburger {
+      display: none;
+    }
+  
+    .cards {
+      flex-direction: row;
+      justify-content: center;
+    }
+  
+    .hero-content h1 {
+      font-size: 48px;
+    }
+  
+    .hero-content p {
+      font-size: 19.2px;
+    }
+  
+    .cta-form {
+      flex-direction: row;
+      justify-content: center;
+    }
+  
+    .cta-form input {
+      width: 250px;
+    }
+  }

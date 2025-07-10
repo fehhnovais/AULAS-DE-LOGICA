@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> manipulando DOM</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1> Manipulando a DOM com JS</h1>
+
+    <section>
+        <h2> Exemplo 01: Alterar Texto</h2>
+        <h3 id=" titulo"> Ola mundo !!</h3>
+        <button onclick=" mudarTexto()"> MUDAR TEXTO</button>
+
+    </section>
+
+    <section>
+
+        <h2>Exemplo 02: Alterar estilo</h2>
+        <p id=" paragrafo"> Clique no botao para mudar cor e texto</p>
+        <button onclick="mudarCor()"> MUDAR COR</button>
+
+    </section>
+
+    <section>
+        <h2> Exemplo 03: Adicionar item</h2>
+        <button onclick="adicionarItem()">ADICIONAR ITEM</button>
+        <ul id="lista"></ul>
+
+    </section>
+
+
+    <section>
+        <h2>Exemplo 04: Remover ultimo item</h2>
+        <ul id="lista2">
+        <li>item a</li>
+        <li>item b</li>
+        </ul>
+        <button onclick="removerUltimo()"> REMOVER ULTIMO</button>
+    </section>
+
+    <section>
+        <h2> Exemplo 05: Eventos visuais</h2>
+        <p> Passe o mouse na caixa abaixo :</p>
+        <div id="caixa" class="caixa" onmouseover="destacar()" onmouseout="removerDestaque()"></div>
+    </section>
+
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
